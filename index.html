@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="image-slider">
+        <img src="TokyoImage.jpg" alt="Tokyo" class="slide">
+        <img src="RioImage.jpeg" alt="Rio" class="slide">
+        <img src="MauiImage.jpeg" alt="Maui" class="slide">
+        <img src="SwissAlpsImage.jpeg" alt="Swiss Alps" class="slide">
+        <img src="RomeImage.webp" alt="Rome" class="slide">
+    </div>
+
+    <div class="content">
+        <h1 id="homepageTitle">Lorem Ipsum</h1>
+
+        <div id="banner">
+            <button class="nav-button first-button" onclick="location.href='index.html'">Home</button>
+            <button class="nav-button" onclick="location.href='destinations.html'">Destinations</button>
+            <button class="nav-button" onclick="location.href='quiz.html'">Travel Quiz</button>
+            <button class="nav-button last-button" onclick="location.href='booking.html'">Booking</button>
+        </div>
+
+        <div id="IntroContent">
+            <p>
+                Welcome to Lorem Ipsum! We are a travel website that can help you plan your next vacation. With our help, you can find the perfect destination for you.
+                If you are unsure of where to go, then take the quiz! If you are feeling adventurous, then click the random destination button!
+            </p>
+            <table id="homepageTable">
+                <tr>
+                    <td class="quiz-section">
+                        <button class="quizButton" onclick="location.href='quiz.html'">Destination Quiz</button>
+                    </td>
+                    <td class="random-section">
+                        <button class="randomButton" onclick="location.href='destinations.html'">Random Destination</button>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+
+</body>
+</html>
