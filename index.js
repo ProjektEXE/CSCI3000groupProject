@@ -24,3 +24,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setInterval(showNextSlide, 3000);
 });
+
+const destinations = [
+    "cybertron.html",
+    "pandora.html",
+    "arrakis.html",
+    "arda.html",
+    "gallifrey.html",
+    "coruscant.html",
+    "haloRing.html"
+];
+
+function goToRandomDestination() {
+    const randomIndex = Math.floor(Math.random() * destinations.length);
+    window.location.href = destinations[randomIndex];
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var randomButton = document.querySelector(".randomButton");
+
+    if (randomButton) {
+        randomButton.addEventListener("click", goToRandomDestination);
+    }
+});
