@@ -42,11 +42,6 @@ body, html {
     visibility: hidden;
 }
 
-.nav-button:hover, .last-button:hover {
-    border-top-right-radius: 1vw;
-    border-bottom-right-radius: 1vw;
-}
-
 #homepageTitle {
     font-size: 3.5vw;
     margin-top: 2vw;
