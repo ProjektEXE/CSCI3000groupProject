@@ -21,29 +21,30 @@ document.addEventListener("DOMContentLoaded", function() {
             slider.style.transition = 'transform 1.5s ease-in-out';
         }
     }
-
     setInterval(showNextSlide, 3000);
+    
+    const randomButton = document.querySelector(".randomButton");
+    const galleryButton = document.getElementById("galleryButton");
+    const content = document.querySelector(".content");
+    const imageSlider = document.querySelector('.image-slider');
+
+    if (randomButton) {
+        randomButton.addEventListener("click", goToRandomDestination);
+    }
+
 });
 
 const destinations = [
-    "cybertron.html",
-    "pandora.html",
-    "arrakis.html",
-    "arda.html",
-    "gallifrey.html",
-    "coruscant.html",
-    "haloRing.html"
+    "pages/cybertron.html",
+    "pages/pandora.html",
+    "pages/arrakis.html",
+    "pages/arda.html",
+    "pages/gallifrey.html",
+    "pages/coruscant.html",
+    "pages/haloRing.html"
 ];
 
 function goToRandomDestination() {
     const randomIndex = Math.floor(Math.random() * destinations.length);
     window.location.href = destinations[randomIndex];
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    var randomButton = document.querySelector(".randomButton");
-
-    if (randomButton) {
-        randomButton.addEventListener("click", goToRandomDestination);
-    }
-});
