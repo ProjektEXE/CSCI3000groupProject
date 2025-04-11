@@ -16,6 +16,7 @@ body, html {
     display: flex;
     transition: transform 1.5s ease-in-out;
     z-index: 1;
+    cursor: pointer;
 }
 
 .image-slider .slide {
@@ -32,6 +33,18 @@ body, html {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px #000000;
+    transition: opacity 0.3s ease;
+}
+
+.content.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.nav-button:hover, .last-button:hover {
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
 }
 
 #homepageTitle {
@@ -51,7 +64,7 @@ body, html {
     flex: 1;
     font-size: 2vw;
     padding: 1vw 0;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(117, 117, 117, 0.9);
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -66,6 +79,64 @@ body, html {
     color: white;
 }
 
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    flex: 1;
+}
+
+.dropbtn {
+    width: 100%;
+    font-size: 2vw;
+    padding: 1vw 0;
+    background-color: rgba(117, 117, 117, 0.9);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(117, 117, 117, 0.9);
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:last-child:hover {
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #2980b9;
+}
+
 .first-button {
     border-top-left-radius: 1vw;
     border-bottom-left-radius: 1vw;
@@ -77,7 +148,7 @@ body, html {
 }
 
 #IntroContent {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(117, 117, 117, 0.9);
     padding-left: 1vw;
     padding-right: 1vw;
     font-size: 2vw;
@@ -124,3 +195,4 @@ body, html {
     background-color: #2980b9;
     color: white;
 }
+
