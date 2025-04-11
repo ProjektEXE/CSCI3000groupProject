@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href=".\styles\index.css">
+    <script src=".\components\index.js" defer></script>
+</head>
+<body>
+    <div class="image-slider">
+        <img src=".\images\PlanetCybertron.jpg" alt="Cybertron" class="slide">
+        <img src=".\images\PandoraImage.jpg" alt="Pandora" class="slide">
+        <img src=".\images\ArrakisImage.jpg" alt="Arrakis" class="slide">
+        <img src=".\images\ArdaImage.jpeg" alt="ArdaImage" class="slide">
+        <img src=".\images\GallifreyImage.jpg" alt="Gallifrey" class="slide">
+        <img src=".\images\CoruscantImage.jpg" alt="Coruscant" class="slide">
+        <img src=".\images\HaloRingImage.jpg" alt="Halo Ring" class="slide">
+    </div>
+
+    <div class="content">
+        <h1 id="homepageTitle">Lorem Ipsum</h1>
+
+        <div id="banner">
+            <button class="nav-button first-button" onclick="location.href='index.html'">Home</button>
+            <div class="dropdown">
+                <button class="dropbtn">Destinations</button>
+                <div class="dropdown-content">
+                    <a href="pages/cybertron.html">Cybertron</a>
+                    <a href="pages/pandora.html">Pandora</a>
+                    <a href="pages/arrakis.html">Arrakis</a>
+                    <a href="pages/arda.html">Arda</a>
+                    <a href="pages/gallifrey.html">Gallifrey</a>
+                    <a href="pages/coruscant.html">Coruscant</a>
+                    <a href="pages/haloRing.html">Halo Ring</a>
+                </div>
+            </div>
+            <button class="nav-button" onclick="location.href='pages/quiz.html'">Travel Quiz</button>
+            <button class="nav-button last-button" id="galleryButton">Gallery</button>
+        </div>
+
+        <div id="IntroContent">
+            <p>
+                Welcome to Lorem Ipsum! We are a travel website that can help you plan your next vacation. 
+                Whether it be the deserts of Arrakis or the futuristic environment of Cybertron, we can 
+                help you find the perfect destination! If you are unsure of where to go, then take the quiz! 
+                If you are feeling adventurous, then click the random destination button!
+            </p>
+            <table id="homepageTable">
+                <tr>
+                    <td class="quiz-section">
+                        <button class="quizButton" onclick="location.href='pages/quiz.html'">Destination Quiz</button>
+                    </td>
+                    <td class="random-section">
+                        <button class="randomButton" onclick="location.href='destinations.html'">Random Destination</button>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+
+</body>
+</html>
