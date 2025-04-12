@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Trip</title>
+  <link rel="stylesheet" href="booking.css">
 </head>
 <body>
-    
+  <div class="form-container">
+    <h1 class="form-title">Book Your Trip</h1>
+    <form id="bookingForm" action="confirmation.html" method="POST">
+
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number (optional):</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="passengers">Number of Passengers:</label>
+        <input type="number" id="passengers" name="passengers" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination" required>
+          <option value="">-- Select a Destination --</option>
+          <option value="Cybertron">Cybertron</option>
+          <option value="Pandora">Pandora</option>
+          <option value="Arrakis">Arrakis</option>
+          <option value="Arda">Arda</option>
+          <option value="Gallifrey">Gallifrey</option>
+          <option value="Coruscant">Coruscant</option>
+          <option value="HaloRing">Halo Ring</option>  
+        </select>
+      </div>
+
+      <h2 class="section-title">Billing Address</h2>
+
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="street">Street Address:</label>
+        <input type="text" id="street" name="street" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group half-width">
+          <label for="state">State/Province:</label>
+          <input type="text" id="state" name="state" required>
+        </div>
+        <div class="form-group half-width">
+          <label for="zip">ZIP/Postal Code:</label>
+          <input type="text" id="zip" name="zip" required>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Payment Information</h2>
+
+      <div class="form-group">
+        <label for="cardName">Cardholder Name:</label>
+        <input type="text" id="cardName" name="cardName" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="cardNumber">Card Number:</label>
+        <input type="tel" id="cardNumber" name="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group half-width">
+          <label for="expiration">Expiration (MM/YY):</label>
+          <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required>
+        </div>
+        <div class="form-group half-width">
+          <label for="cvv">CVV:</label>
+          <input type="tel" id="cvv" name="cvv" maxlength="4" required>
+        </div>
+      </div>
+      
+      <div class="form-group submit-group">
+        <button type="submit" id="submitButton">Submit Booking</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="booking.js" defer></script>
+
+
 </body>
 </html>
