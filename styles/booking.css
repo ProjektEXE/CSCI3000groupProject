@@ -1,0 +1,103 @@
+/* Reset and base styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #d2b48c; /* Tan background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Main form container */
+.form-container {
+    background-color: rgba(117, 117, 117, 0.9); /* Transparent gray overlay */
+    padding: 3vw;
+    margin-top: 4vw;
+    border-radius: 1.5vw;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Title styling */
+  .form-title {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 3vw;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  /* Form groups */
+  .form-group {
+    margin-bottom: 2.8vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8vw;
+  }
+  
+  label {
+    margin-bottom: 1vw;
+    font-weight: bold;
+  }
+  
+  /* Inputs and dropdown */
+  input, select {
+    padding: 1.2vw;
+    border-radius: 0.8vw;
+    border: none;
+    font-size: 1.5vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+  }
+  
+  input:focus, select:focus {
+    outline: 2px solid #00bfff;
+  }
+  
+  /* Submit button */
+  #submitButton {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    padding: 1.5vw 2.5vw;
+    border: none;
+    border-radius: 1vw;
+    font-size: 2vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  #submitButton:hover {
+    background-color: #2980b9;
+    color: white;
+  }
+  
+  .invalid-input {
+    border: 2px solid red;
+  }
+
+  .section-title {
+    font-size: 2.5vw;
+    margin-top: 3vw;
+    margin-bottom: 1.5vw;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.5vw;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+  }
+  
+  .half-width {
+    flex: 1;
+  }
