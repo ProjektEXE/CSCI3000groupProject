@@ -1,0 +1,78 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #d2b48c; /* Tan background */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .confirmation-container {
+    background-color: rgba(117, 117, 117, 0.9);
+    padding: 4vw;
+    border-radius: 2vw;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  .confirmation-container h1 {
+    font-size: 3vw;
+    margin-bottom: 2vw;
+  }
+  
+  .confirmation-container p {
+    font-size: 1.8vw;
+    margin-bottom: 1.5vw;
+  }
+  
+  .highlight {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .return-link a {
+    font-size: 1.6vw;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .return-link a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+  }
+
+  .return-button-container {
+    margin-top: 3vw;
+    text-align: center;
+  }
+  
+  .return-button-container button {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: auto;
+    width: 60vw;
+    padding: 2vw 3vw;
+    font-size: 3vw;
+    cursor: pointer;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 1vw;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .return-button-container button:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+    color: white;
+  }
+  
