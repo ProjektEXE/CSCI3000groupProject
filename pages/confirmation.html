@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation</title>
+  <link rel="stylesheet" href="confirmation.css">
+</head>
+<body>
+  <div class="confirmation-container">
+    <h1>Thank you for your purchase!</h1>
+    <p id="confirmation-email">Your confirmation email has been sent to: <span class="highlight">[email]</span></p>
+    <p>Your booking has been successfully received. We'll notify you when your itinerary is ready for liftoff 🚀</p>
+    <div class="return-button-container">
+        <button onclick="window.location.href='index.html';">Return to Home</button>
+      </div>      
+  </div>
+
+  <script>
+    // Extract email from URL param
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get('email');
+    const emailSpan = document.querySelector(".highlight");
+    if (email) {
+      emailSpan.textContent = email;
+    } else {
+      emailSpan.textContent = "[your email]";
+    }
+  </script>
+</body>
+</html>
