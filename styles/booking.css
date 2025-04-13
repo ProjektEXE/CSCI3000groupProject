@@ -3,10 +3,10 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #d2b48c; /* Tan background */
-    color: white;
+    background-color: FDFBF6; /* Light beige background */
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -14,68 +14,67 @@ body, html {
   
   /* Main form container */
 .form-container {
-    background-color: rgba(117, 117, 117, 0.9); /* Transparent gray overlay */
+    background-color: #FFFFFF; /* White background */
     padding: 3vw;
     margin-top: 4vw;
     border-radius: 1.5vw;
     width: 90%;
     max-width: 600px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
   
   /* Title styling */
   .form-title {
     text-align: center;
-    font-size: 3vw;
-    margin-bottom: 3vw;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+    font-size: 2.5vw;
+    margin-bottom: 2vw;
+    color: #005fa3; /* Dark blue color */
   }
   
   /* Form groups */
   .form-group {
-    margin-bottom: 2.8vw;
+    margin-bottom: 2vw;
     display: flex;
     flex-direction: column;
-    font-size: 1.8vw;
+    font-size: 1.2vw;
   }
   
   label {
-    margin-bottom: 1vw;
+    margin-bottom: 0.8vw;
     font-weight: bold;
   }
   
   /* Inputs and dropdown */
   input, select {
-    padding: 1.2vw;
-    border-radius: 0.8vw;
-    border: none;
+    padding: 1vw;
+    border-radius: 0.5vw;
+    border: 1px solic #ccc;
     font-size: 1.5vw;
-    background-color: rgba(255, 255, 255, 0.85);
-    color: black;
+    background-color: #F1F6FE; /* Light blue background */
+    color: #333;
   }
   
   input:focus, select:focus {
-    outline: 2px solid #00bfff;
+    outline: 2px solid #0077cc; /* Blue outline on focus */
+    border-color: #0077cc; /* Blue border on focus */
   }
   
   /* Submit button */
   #submitButton {
-    background-color: rgba(255, 255, 255, 0.6);
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    padding: 1.5vw 2.5vw;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 1.2vw;
     border: none;
-    border-radius: 1vw;
-    font-size: 2vw;
+    border-radius: 0.7vw;
+    font-size: 1.5vw;
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 100%;
+    margin-top: 1vw;
   }
   
   #submitButton:hover {
-    background-color: #2980b9;
-    color: white;
+    background-color: #005fa3; /* Darker blue on hover */
   }
   
   .invalid-input {
@@ -83,12 +82,11 @@ body, html {
   }
 
   .section-title {
-    font-size: 2.5vw;
+    font-size: 2vw;
     margin-top: 3vw;
     margin-bottom: 1.5vw;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #0077cc;
+    border-bottom: 2px solid #F1F6FE;
     padding-bottom: 0.5vw;
   }
   
@@ -101,3 +99,136 @@ body, html {
   .half-width {
     flex: 1;
   }
+
+/* Existing styles stay the same */
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    display: none;
+  }
+  
+  input.error, select.error {
+    border: 2px solid red;
+    background-color: #ffe5e5;
+  }
+  
+
+/* Reset and base styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: FDFBF6; /* Light beige background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Main form container */
+.form-container {
+  background-color: #FFFFFF; /* White background */
+  padding: 3vw;
+  margin-top: 4vw;
+  border-radius: 1.5vw;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.form-title {
+  text-align: center;
+  font-size: 2.5vw;
+  margin-bottom: 2vw;
+  color: #005fa3; /* Dark blue color */
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 2vw;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2vw;
+}
+
+label {
+  margin-bottom: 0.8vw;
+  font-weight: bold;
+}
+
+/* Inputs and dropdown */
+input, select {
+  padding: 1vw;
+  border-radius: 0.5vw;
+  border: 1px solic #ccc;
+  font-size: 1.5vw;
+  background-color: #F1F6FE; /* Light blue background */
+  color: #333;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #0077cc; /* Blue outline on focus */
+  border-color: #0077cc; /* Blue border on focus */
+}
+
+/* Submit button */
+#submitButton {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 1.2vw;
+  border: none;
+  border-radius: 0.7vw;
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 1vw;
+}
+
+#submitButton:hover {
+  background-color: #005fa3; /* Darker blue on hover */
+}
+
+.invalid-input {
+  border: 2px solid red;
+}
+
+.section-title {
+  font-size: 2vw;
+  margin-top: 3vw;
+  margin-bottom: 1.5vw;
+  color: #0077cc;
+  border-bottom: 2px solid #F1F6FE;
+  padding-bottom: 0.5vw;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+}
+
+.half-width {
+  flex: 1;
+}
+
+/* Existing styles stay the same */
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  display: none;
+}
+
+input.error, select.error {
+  border: 2px solid red;
+  background-color: #ffe5e5;
+}
+
+
