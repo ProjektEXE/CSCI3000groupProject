@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Slideshow functionality
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
     const slider = document.querySelector('.image-slider');
@@ -22,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     setInterval(showNextSlide, 3000);
-    
+
+    // Button functionality
     const randomButton = document.querySelector(".randomButton");
     const galleryButton = document.getElementById("galleryButton");
     const content = document.querySelector(".content");

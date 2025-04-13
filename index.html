@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,13 @@
     <link rel="stylesheet" href=".\styles\index.css">
     <script src=".\components\index.js" defer></script>
 </head>
+
 <body>
-    <div class="image-slider">
-        <img src=".\images\PlanetCybertron.jpg" alt="Cybertron" class="slide">
-        <img src=".\images\PandoraImage.jpg" alt="Pandora" class="slide">
-        <img src=".\images\ArrakisImage.jpg" alt="Arrakis" class="slide">
-        <img src=".\images\ArdaImage.jpeg" alt="ArdaImage" class="slide">
-        <img src=".\images\GallifreyImage.jpg" alt="Gallifrey" class="slide">
-        <img src=".\images\CoruscantImage.jpg" alt="Coruscant" class="slide">
-        <img src=".\images\HaloRingImage.jpg" alt="Halo Ring" class="slide">
-    </div>
 
-    <div class="content">
-        <h1 id="homepageTitle">Lorem Ipsum</h1>
-
-        <div id="banner">
-            <button class="nav-button first-button" onclick="location.href='index.html'">Home</button>
+    <!-- Navigation Banner -->
+    <div id="banner">
+        <nav>
+            <button class="nav-button first-button" onclick="location.href='beta.html'">Home</button>
             <div class="dropdown">
                 <button class="dropbtn">Destinations</button>
                 <div class="dropdown-content">
@@ -36,29 +28,101 @@
                 </div>
             </div>
             <button class="nav-button" onclick="location.href='pages/quiz.html'">Travel Quiz</button>
-            <button class="nav-button last-button" onclick="location.href='pages/booking.html'" id="booking">Book Now!</button>
+            <button class="nav-button last-button" onclick="location.href='pages/booking.html'" id="booking">Book
+                Now!</button>
+        </nav>
+    </div>
+
+    <!-- Hero Section with Background Slider -->
+    <div class="hero-container" id="image-slider">
+        <div class="image-slider">
+            <img class="slide" src="/images/PlanetCybertron.jpg" alt="Cybertron" />
+            <img class="slide" src="/images/PandoraImage.jpg" alt="Pandora" />
+            <img class="slide" src="/images/ArrakisImage.jpg" alt="Arrakis" />
+            <img class="slide" src="/images/ArdaImage.jpeg" alt="Arda" />
+            <img class="slide" src="/images/GallifreyImage.jpg" alt="Gallifrey" />
+            <img class="slide" src="/images/CoruscantImage.jpg" alt="Coruscant" />
+            <img class="slide" src="/images/HaloRingImage.jpg" alt="Halo Ring" />
         </div>
 
-        <div id="IntroContent">
-            <p>
-                Welcome to Lorem Ipsum! We are a travel website that can help you plan your next vacation. 
-                Whether it be the deserts of Arrakis or the futuristic environment of Cybertron, we can 
-                help you find the perfect destination! If you are unsure of where to go, then take the quiz! 
-                If you are feeling adventurous, then click the random destination button!
-            </p>
-            <table id="homepageTable">
-                <tr>
-                    <td class="quiz-section">
-                        <button class="quizButton" onclick="location.href='pages/quiz.html'">Destination Quiz</button>
-                    </td>
-                    <td class="random-section">
-                        <button class="randomButton" onclick="location.href='destinations.html'">Random Destination</button>
-                    </td>
-                </tr>
-            </table>
-            
+        <div class="hero-section">
+            <div class="hero-text">
+                <h1>VoyageVerse</h1>
+                <p>Explore incredible worlds — from deserts to advanced civilizations, there is a place for you. Start
+                    your
+                    interdimensional voyage today!</p>
+                <a class="cta-button" href="#main-content">Start Exploring</a>
+            </div>
         </div>
     </div>
 
+    <!-- Content Section -->
+    <div class="main-content" id="main-content">
+        <section class="intro-section">
+            <h2>Discover Your Next Destination</h2>
+            <p>Find out where you belong in the multiverse.</p>
+        </section>
+
+        <section class="destination-content">
+            <div class="destination-cards">
+
+                <div class="destination-card">
+                    <div class="destination-image-container">
+                        <img src="/images/PlanetCybertron.jpg" alt="Cybertron" class="destination-image">
+                    </div>
+                    <h3>Cybertron</h3>
+                    <p>The home planet of the Transformers, known for its advanced technology.</p>
+                    <button class="explore-button" onclick="location.href='pages/pandora.html'">Explore</button>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image-container">
+                        <img src="/images/ArrakisImage.jpg" alt="Arrakis" class="destination-image">
+                    </div>
+                    <h3>Arrakis</h3>
+                    <p>The desert planet known for its spice and harsh environment.</p>
+                    <button class="explore-button" onclick="location.href='pages/arrakis.html'">Explore</button>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image-container">
+                        <img src="/images/CoruscantImage.jpg" alt="Coruscant" class="destination-image">
+                    </div>
+                    <h3>Coruscant</h3>
+                    <p>The bustling city-planet, a hub of galactic politics and culture.</p>
+                    <button class="explore-button" onclick="location.href='pages/coruscant.html'">Explore</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <!-- Final Call to Action Section -->
+            <div class="call-to-action">
+                <p>
+                    Ready for your next adventure? At VoyageVerse, we’re here to inspire your travels! Discover
+                    breathtaking
+                    worlds, from the lush landscapes of Pandora to the awe-inspiring Halo Ring. Take our quiz to find
+                    your perfect
+                    getaway or let fate decide with a random destination!
+                </p>
+                <table id="call-to-action-table">
+                    <tr>
+                        <td class="quiz-section">
+                            <button class="quiz-button" onclick="location.href='pages/quiz.html'">Travel Quiz</button>
+                        </td>
+                        <td class="random-section">
+                            <button class="random-button" onclick="location.href='destinations.html'">Random
+                                Destination</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+
+    </div>
+
 </body>
+
 </html>

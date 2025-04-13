@@ -1,190 +1,248 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     width: 100vw;
-    height: 100vh;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
-}
-
-.image-slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    transition: transform 1.5s ease-in-out;
-    z-index: 1;
-    cursor: pointer;
-}
-
-.image-slider .slide {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    flex-shrink: 0;
-    z-index: 1;
-}
-
-.content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    transition: opacity 0.3s ease;
-}
-
-
-#homepageTitle {
-    font-size: 3.5vw;
-    margin-top: 2vw;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-#banner {
-    display: flex; 
-    justify-content: space-between;
-    width: 98vw; 
-    margin: 1vw auto; 
-}
-
-.nav-button, .quizButton, .randomButton{
-    flex: 1;
-    font-size: 2vw;
-    padding: 1vw 0;
-    background-color: rgba(117, 117, 117, 0.9);
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    text-align: center;
+    height: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #FDFBF6;
 }
 
-.nav-button:hover {
-    background-color: #2980b9;
-    color: white;
+/* Navigation Banner */
+#banner {
+    width: 100%;
+    background-color: #0077cc;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-/* Dropdown styles */
+.nav-button,
+.quizButton,
+.randomButton,
+.dropbtn,
+.cta-button {
+    padding: 1vw 2vw;
+    font-size: 1.5vw;
+    background-color: #0077cc;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.nav-button:hover,
+.quizButton:hover,
+.randomButton:hover,
+.dropbtn:hover,
+.cta-button:hover,
+.explore-button:hover,
+.quiz-button:hover,
+.random-button:hover {
+    background-color: #005fa3;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
-    flex: 1;
-}
-
-.dropbtn {
-    width: 100%;
-    height: 6vw;
-    font-size: 2vw;
-    padding: 1vw 0;
-    background-color: rgba(117, 117, 117, 0.9);
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .dropdown-content {
+    top: 100%;
+    left: 0;
+    width: 100%;
     display: none;
     position: absolute;
-    font-size: 1.25vw;
-    background-color: rgba(117, 117, 117, 0.9);
-    min-width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-bottom-left-radius: 1vw;
-    border-bottom-right-radius: 1vw;
+    background-color: #0077cc;
+    min-width: 10vw;
+    z-index: 10;
+    margin-top: 0;
+    border-radius: 0.5vw;
 }
 
 .dropdown-content a {
-    color: white;
-    padding: 1vw 0;
+    color: #FFFFFF;
+    padding: 0.8vw 1vw;
     text-decoration: none;
     display: block;
-    text-align: center;
+    text-align: left;
+    font-size: 1.1vw;
+    border-bottom: 1px solid #444;
 }
 
 .dropdown-content a:hover {
-    background-color: #2980b9;
-    color: white;
+    background-color: #005fa3;
+}
+
+.dropdown-content a:first-child:hover {
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+}
+
+.dropdown-content a:last-child:hover {
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-.dropdown-content a:last-child:hover {
-    border-bottom-left-radius: 1vw;
-    border-bottom-right-radius: 1vw;
+/* Hero Section with Background Slider */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: #2980b9;
+.image-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: calc(100vw * 8);
+    height: 100%;
+    z-index: 1;
 }
 
-.first-button {
-    border-top-left-radius: 1vw;
-    border-bottom-left-radius: 1vw;
+.image-slider img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
-.last-button {
-    border-top-right-radius: 1vw;
-    border-bottom-right-radius: 1vw;
-}
-
-#IntroContent {
-    background-color: rgba(117, 117, 117, 0.9);
-    padding-left: 1vw;
-    padding-right: 1vw;
-    font-size: 2vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    border-radius: 1vw;
-}
-
-.quizButton:hover, .randomButton:hover {
-    background-color: #2980b9;
-    color: white;
-}
-
-#homepageTable {
-    width: 60vw; 
-    margin: 3vw auto; 
-    border-spacing: 2vw; 
-}
-
-#homepageTable td {
-    width: 50%;
-    text-align: center; 
-    vertical-align: middle;
-}
-
-.quizButton, .randomButton {
-    width: 15vw; 
-    height: 6vw;
-    border-radius: 1vw;
-    font-size: 2vw;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+.hero-section {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
     display: flex;
     align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+    max-width: 50%;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.hero-text h1 {
+    font-size: 3.5vw;
+    margin-bottom: 1vw;
+}
+
+.hero-text p {
+    font-size: 1.5vw;
+    margin-bottom: 2vw;
+}
+
+/* Main content section */
+.main-content {
+    background-color: #F1F6FE;
+    padding: 4vw;
+}
+
+.intro-section {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.destination-content {
+    margin-top: 4vw;
+}
+
+.destination-cards {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 2vw;
+}
+
+.destination-card {
+    width: 22vw;
+    background-color: #FFFFFF;
+    padding: 1.5vw;
+    border-radius: 1vw;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-0.5vw);
+}
+
+.destination-image-container {
+    width: 100%;
+    height: 14vw;
+    overflow: hidden;
+    border-radius: 0.8vw;
+    margin-bottom: 1vw;
+}
+
+.destination-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.8vw;
+}
+
+.explore-button {
+    padding: 0.7vw 1.5vw;
+    font-size: 1vw;
+    background-color: #0077cc;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    margin-top: 1vw;
+    transition: background-color 0.3s ease;
+}
+
+.call-to-action {
+    margin-top: 5vw;
+    text-align: center;
+    font-size: 1.3vw;
+    padding: 2vw 5vw;
+    background-color: #F1F6FE;
+    border-radius: 1vw;
+}
+
+.call-to-action p {
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    font-size: 1.5vw;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#call-to-action-table {
     margin: 0 auto;
 }
 
-.quizButton:hover, .randomButton:hover {
-    background-color: #2980b9;
-    color: white;
+.quiz-button, .random-button {
+    font-size: 1.3vw;
+    padding: 1vw 2vw;
+    background-color: #0077cc;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.7vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 1vw;
 }
-
