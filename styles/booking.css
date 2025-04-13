@@ -1,5 +1,6 @@
 /* Reset and base styling */
 body, html {
+    padding-top: 5vw;
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -11,6 +12,93 @@ body, html {
     justify-content: center;
     align-items: flex-start;
   }
+
+  /* Navigation Banner */
+#banner {
+  left: 0;
+  width: 100%;
+  background-color: #0077cc;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-button,
+.quizButton,
+.randomButton,
+.dropbtn,
+.cta-button {
+  padding: 1vw 2vw;
+  font-size: 1.5vw;
+  background-color: #0077cc;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.nav-button:hover,
+.quizButton:hover,
+.randomButton:hover,
+.dropbtn:hover,
+.cta-button:hover,
+.explore-button:hover,
+.quiz-button:hover,
+.random-button:hover {
+  background-color: #005fa3;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  position: absolute;
+  background-color: #0077cc;
+  min-width: 10vw;
+  z-index: 10;
+  margin-top: 0;
+  border-radius: 0.5vw;
+}
+
+.dropdown-content a {
+  color: #FFFFFF;
+  padding: 0.8vw 1vw;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 1.1vw;
+  border-bottom: 1px solid #444;
+}
+
+.dropdown-content a:hover {
+  background-color: #005fa3;
+}
+
+.dropdown-content a:first-child:hover {
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+}
+
+.dropdown-content a:last-child:hover {
+  border-bottom-left-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
   
   /* Main form container */
 .form-container {
