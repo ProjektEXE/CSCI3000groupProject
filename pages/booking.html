@@ -34,7 +34,7 @@
 
   <div class="form-container">
     <h1 class="form-title">Book Your Trip</h1>
-    <form id="bookingForm" action="confirmation.html" method="POST">
+    <form id="bookingForm" action="checkout.html" method="POST">
 
       <div class="form-group">
         <label for="firstName">First Name:</label>
@@ -81,68 +81,14 @@
         <p class="error-message" id="destinationError"></p>
       </div>
 
-      <h2 class="section-title">Billing Address</h2>
-
       <div class="form-group">
-        <label for="country">Country:</label>
-        <input type="text" id="country" name="country" required>
-        <p class="error-message" id="countryError"></p>
+        <label for="departure">Departure Date:</label>
+        <input type="date" id="departure" name="departure" required min="">
+        <p class="error-message" id="departureError"></p>
       </div>
-
-      <div class="form-group">
-        <label for="street">Street Address:</label>
-        <input type="text" id="street" name="street" required>
-        <p class="error-message" id="streetError"></p>
-      </div>
-
-      <div class="form-group">
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city" required>
-        <p class="error-message" id="cityError"></p>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group half-width">
-          <label for="state">State/Province:</label>
-          <input type="text" id="state" name="state" required>
-          <p class="error-message" id="stateError"></p>
-        </div>
-        <div class="form-group half-width">
-          <label for="zip">ZIP/Postal Code:</label>
-          <input type="text" id="zip" name="zip" required>
-          <p class="error-message" id="zipError"></p>
-        </div>
-      </div>
-
-      <h2 class="section-title">Payment Information</h2>
-
-      <div class="form-group">
-        <label for="cardName">Cardholder Name:</label>
-        <input type="text" id="cardName" name="cardName" required>
-        <p class="error-message" id="cardNameError"></p>
-      </div>
-
-      <div class="form-group">
-        <label for="cardNumber">Card Number:</label>
-        <input type="tel" id="cardNumber" name="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required>
-        <p class="error-message" id="cardNumberError"></p>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group half-width">
-          <label for="expiration">Expiration (MM/YY):</label>
-          <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required>
-          <p class="error-message" id="expirationError"></p>
-        </div>
-        <div class="form-group half-width">
-          <label for="cvv">CVV:</label>
-          <input type="tel" id="cvv" name="cvv" maxlength="4" required>
-          <p class="error-message" id="cvvError"></p>
-        </div>
-      </div>
-
+      
       <div class="form-group submit-group">
-        <button type="submit" id="submitButton">Submit Booking</button>
+        <button type="submit" id="submitButton">Proceed to Checkout</button>
       </div>
 
     </form>

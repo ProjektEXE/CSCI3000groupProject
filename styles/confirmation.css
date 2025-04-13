@@ -71,3 +71,29 @@ html {
   background-color: #005fa3; /* Darker blue on hover */
   transform: scale(1.03);
 }
+
+.subtitle {
+  font-size: 1.3vw;
+  margin-bottom: 0.6vw;
+  color: #444;
+}
+
+.booking-summary {
+  margin-top: 2.5vw;
+  padding: 2vw;
+  background-color: #F1F6FE;
+  border-radius: 1vw;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.booking-summary h2 {
+  font-size: 1.6vw;
+  color: #0077cc;
+  margin-bottom: 1vw;
+}
+
+.booking-summary p {
+  font-size: 1.2vw;
+  margin: 0.5vw 0;
+}

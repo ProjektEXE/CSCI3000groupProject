@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VoyageVerse | Checkout</title>
+  <link rel="stylesheet" href="../styles/checkout.css"/>
+  <script src="../components/checkout.js" defer></script>
+</head>
+
+<body>
+  <!-- Navigation Banner -->
+  <div id="banner">
+    <nav>
+      <button class="nav-button first-button" onclick="location.href='../index.html'">Home</button>
+      <div class="dropdown">
+        <button class="dropbtn">Destinations</button>
+        <div class="dropdown-content">
+          <a href="cybertron.html">Cybertron</a>
+          <a href="pandora.html">Pandora</a>
+          <a href="arrakis.html">Arrakis</a>
+          <a href="arda.html">Arda</a>
+          <a href="gallifrey.html">Gallifrey</a>
+          <a href="coruscant.html">Coruscant</a>
+          <a href="haloRing.html">Halo Ring</a>
+        </div>
+      </div>
+      <button class="nav-button" onclick="location.href='quiz.html'">Travel Quiz</button>
+      <button class="nav-button last-button" onclick="location.href='booking.html'" id="booking">Book Now!</button>
+    </nav>
+  </div>
+
+  <!-- Checkout Container -->
+  <div class="form-container">
+    <h1 class="form-title">Checkout</h1>
+
+    <!-- Trip Summary -->
+    <div class="cost-summary">
+      <h2 class="section-title">Trip Summary</h2>
+      <div class="cost-details">
+        <p><strong>First Name:</strong> <span id="summaryFirstName"></span></p>
+        <p><strong>Last Name:</strong> <span id="summaryLastName"></span></p>
+        <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+        <p><strong>Phone Number:</strong> <span id="summaryPhone"></span></p>
+        <p><strong>Number of Passengers:</strong> <span id="summaryPassengers"></span></p>
+        <p><strong>Destination:</strong> <span id="summaryDestination"></span></p>
+        <p><strong>Departure Date:</strong> <span id="summaryDate"></span></p>
+        <p><strong>Total Cost:</strong> <span id="summaryCost"></span></p>
+      </div>
+      <div class="form-group">
+        <button class="edit-button" onclick="window.location.href='booking.html'">Edit Booking</button>
+      </div>
+    </div>
+
+    <!-- Payment & Billing Form -->
+    <form id="checkoutForm" novalidate>
+      <h2 class="section-title">Billing Address</h2>
+
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required />
+        <p class="error-message" id="countryError"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="street">Street Address:</label>
+        <input type="text" id="street" name="street" required />
+        <p class="error-message" id="streetError"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required />
+        <p class="error-message" id="cityError"></p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group half-width">
+          <label for="state">State/Province:</label>
+          <input type="text" id="state" name="state" required />
+          <p class="error-message" id="stateError"></p>
+        </div>
+        <div class="form-group half-width">
+          <label for="zip">ZIP/Postal Code:</label>
+          <input type="text" id="zip" name="zip" required />
+          <p class="error-message" id="zipError"></p>
+        </div>
+      </div>
+
+      <h2 class="section-title">Payment Information</h2>
+
+      <div class="form-group">
+        <label for="cardName">Cardholder Name:</label>
+        <input type="text" id="cardName" name="cardName" required />
+        <p class="error-message" id="cardNameError"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="cardNumber">Card Number:</label>
+        <input type="tel" id="cardNumber" name="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required />
+        <p class="error-message" id="cardNumberError"></p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group half-width">
+          <label for="expiration">Expiration (MM/YY):</label>
+          <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required />
+          <p class="error-message" id="expirationError"></p>
+        </div>
+        <div class="form-group half-width">
+          <label for="cvv">CVV:</label>
+          <input type="tel" id="cvv" name="cvv" maxlength="4" required />
+          <p class="error-message" id="cvvError"></p>
+        </div>
+      </div>
+
+      <div class="form-group submit-group">
+        <button type="submit" id="submitButton">Confirm Booking</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

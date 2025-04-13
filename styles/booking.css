@@ -1,25 +1,25 @@
 /* Reset and base styling */
 body, html {
-    padding-top: 5vw;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: FDFBF6; /* Light beige background */
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #FDFBF6; /* Light beige background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 0.5vw;
+}
 
-  /* Navigation Banner */
+/* Navigation Banner */
 #banner {
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   background-color: #0077cc;
-  position: fixed;
-  top: 0;
   z-index: 100;
   display: flex;
   justify-content: flex-start;
@@ -62,7 +62,6 @@ body, html {
 .dropdown-content {
   top: 100%;
   left: 0;
-  width: 100%;
   display: none;
   position: absolute;
   background-color: #0077cc;
@@ -99,129 +98,12 @@ body, html {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-  
-  /* Main form container */
-.form-container {
-    background-color: #FFFFFF; /* White background */
-    padding: 3vw;
-    margin-top: 4vw;
-    border-radius: 1.5vw;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Title styling */
-  .form-title {
-    text-align: center;
-    font-size: 2.5vw;
-    margin-bottom: 2vw;
-    color: #005fa3; /* Dark blue color */
-  }
-  
-  /* Form groups */
-  .form-group {
-    margin-bottom: 2vw;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.2vw;
-  }
-  
-  label {
-    margin-bottom: 0.8vw;
-    font-weight: bold;
-  }
-  
-  /* Inputs and dropdown */
-  input, select {
-    padding: 1vw;
-    border-radius: 0.5vw;
-    border: 1px solic #ccc;
-    font-size: 1.5vw;
-    background-color: #F1F6FE; /* Light blue background */
-    color: #333;
-  }
-  
-  input:focus, select:focus {
-    outline: 2px solid #0077cc; /* Blue outline on focus */
-    border-color: #0077cc; /* Blue border on focus */
-  }
-  
-  /* Submit button */
-  #submitButton {
-    background-color: #0077cc;
-    color: #fff;
-    padding: 1.2vw;
-    border: none;
-    border-radius: 0.7vw;
-    font-size: 1.5vw;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    margin-top: 1vw;
-  }
-  
-  #submitButton:hover {
-    background-color: #005fa3; /* Darker blue on hover */
-  }
-  
-  .invalid-input {
-    border: 2px solid red;
-  }
-
-  .section-title {
-    font-size: 2vw;
-    margin-top: 3vw;
-    margin-bottom: 1.5vw;
-    color: #0077cc;
-    border-bottom: 2px solid #F1F6FE;
-    padding-bottom: 0.5vw;
-  }
-  
-  .form-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 2vw;
-  }
-  
-  .half-width {
-    flex: 1;
-  }
-
-/* Existing styles stay the same */
-
-.error-message {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: 0.2rem;
-    display: none;
-  }
-  
-  input.error, select.error {
-    border: 2px solid red;
-    background-color: #ffe5e5;
-  }
-  
-
-/* Reset and base styling */
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: FDFBF6; /* Light beige background */
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
 
 /* Main form container */
 .form-container {
-  background-color: #FFFFFF; /* White background */
+  background-color: #FFFFFF;
   padding: 3vw;
-  margin-top: 4vw;
+  margin-top: 6vw;
   border-radius: 1.5vw;
   width: 90%;
   max-width: 600px;
@@ -233,7 +115,7 @@ body, html {
   text-align: center;
   font-size: 2.5vw;
   margin-bottom: 2vw;
-  color: #005fa3; /* Dark blue color */
+  color: #005fa3;
 }
 
 /* Form groups */
@@ -250,18 +132,20 @@ label {
 }
 
 /* Inputs and dropdown */
-input, select {
+input,
+select {
   padding: 1vw;
   border-radius: 0.5vw;
-  border: 1px solic #ccc;
+  border: 1px solid #ccc;
   font-size: 1.5vw;
-  background-color: #F1F6FE; /* Light blue background */
+  background-color: #F1F6FE;
   color: #333;
 }
 
-input:focus, select:focus {
-  outline: 2px solid #0077cc; /* Blue outline on focus */
-  border-color: #0077cc; /* Blue border on focus */
+input:focus,
+select:focus {
+  outline: 2px solid #0077cc;
+  border-color: #0077cc;
 }
 
 /* Submit button */
@@ -279,13 +163,23 @@ input:focus, select:focus {
 }
 
 #submitButton:hover {
-  background-color: #005fa3; /* Darker blue on hover */
+  background-color: #005fa3;
 }
 
+/* Error Styling */
 .invalid-input {
-  border: 2px solid red;
+  border: 2px solid red !important;
+  background-color: #ffe5e5;
 }
 
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  display: block;
+}
+
+/* Section title */
 .section-title {
   font-size: 2vw;
   margin-top: 3vw;
@@ -295,6 +189,7 @@ input:focus, select:focus {
   padding-bottom: 0.5vw;
 }
 
+/* Row layout */
 .form-row {
   display: flex;
   justify-content: space-between;
@@ -304,19 +199,3 @@ input:focus, select:focus {
 .half-width {
   flex: 1;
 }
-
-/* Existing styles stay the same */
-
-.error-message {
-  color: red;
-  font-size: 0.9rem;
-  margin-top: 0.2rem;
-  display: none;
-}
-
-input.error, select.error {
-  border: 2px solid red;
-  background-color: #ffe5e5;
-}
-
-

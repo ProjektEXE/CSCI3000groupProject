@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confirmation</title>
-  <link rel="stylesheet" href="..\styles\confirmation.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVerse | Confirmation</title>
+  <link rel="stylesheet" href="../styles/confirmation.css" />
 </head>
+
 <body>
   <div class="confirmation-container">
     <h1>Thank you for your purchase!</h1>
-    <p id="confirmation-email">Your confirmation email has been sent to: <span class="highlight">[email]</span></p>
-    <p>Your booking has been successfully received. We'll notify you when your itinerary is ready for liftoff 🚀</p>
+    <p class="subtitle">Your booking has been confirmed. A confirmation email has been sent to:</p>
+    <p class="highlight" id="confirmation-email">[email]</p>
+
+    <div class="booking-summary">
+      <h2>Your Trip Summary</h2>
+      <p><strong>Name:</strong> <span id="summary-name"></span></p>
+      <p><strong>Phone:</strong> <span id="summary-phone"></span></p>
+      <p><strong>Destination:</strong> <span id="summary-destination"></span></p>
+      <p><strong>Departure Date:</strong> <span id="summary-date"></span></p>
+      <p><strong>Passengers:</strong> <span id="summary-passengers"></span></p>
+      <p><strong>Total Cost:</strong> <span id="summary-cost"></span></p>
+    </div>
+
     <div class="return-button-container">
-        <button onclick="window.location.href='../index.html';">Return to Home</button>
-      </div>      
+      <button onclick="window.location.href='../index.html';">Return to Home</button>
+    </div>
   </div>
 
   <script>
-    // Extract email from URL param
-    const params = new URLSearchParams(window.location.search);
-    const email = params.get('email');
-    const emailSpan = document.querySelector(".highlight");
-    if (email) {
-      emailSpan.textContent = email;
-    } else {
-      emailSpan.textContent = "[your email]";
-    }
+    const email = sessionStorage.getItem("email") || "[your email]";
+    const firstName = sessionStorage.getItem("firstName") || "";
+    const lastName = sessionStorage.getItem("lastName") || "";
+    const phone = sessionStorage.getItem("phone") || "Not provided";
+    const destination = sessionStorage.getItem("destination") || "";
+    const departure = sessionStorage.getItem("departure") || "";
+    const passengers = sessionStorage.getItem("passengers") || "1";
+    const cost = parseInt(passengers) * 5000;
+
+    document.getElementById("confirmation-email").textContent = email;
+    document.getElementById("summary-name").textContent = `${firstName} ${lastName}`;
+    document.getElementById("summary-phone").textContent = phone;
+    document.getElementById("summary-destination").textContent = destination;
+    document.getElementById("summary-date").textContent = departure;
+    document.getElementById("summary-passengers").textContent = passengers;
+    document.getElementById("summary-cost").textContent = `$${cost.toLocaleString()}`;
+
+
+    setTimeout(() => {
+      sessionStorage.clear();
+    }, 500);
   </script>
 </body>
+
 </html>

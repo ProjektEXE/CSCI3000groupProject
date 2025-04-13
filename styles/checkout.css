@@ -1,0 +1,218 @@
+/* Reset and base styling */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FDFBF6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 0.5vw;
+}
+
+/* Navigation Banner */
+#banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0077cc;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-button,
+.dropbtn {
+    padding: 1vw 2vw;
+    font-size: 1.5vw;
+    background-color: #0077cc;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-button:hover,
+.dropbtn:hover {
+    background-color: #005fa3;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    top: 100%;
+    left: 0;
+    display: none;
+    position: absolute;
+    background-color: #0077cc;
+    min-width: 10vw;
+    z-index: 10;
+    border-radius: 0.5vw;
+}
+
+.dropdown-content a {
+    color: #FFFFFF;
+    padding: 0.8vw 1vw;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 1.1vw;
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-content a:hover {
+    background-color: #005fa3;
+}
+
+.dropdown-content a:first-child:hover {
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+}
+
+.dropdown-content a:last-child:hover {
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.cost-summary {
+    background-color: #FFFFFF;
+    padding: 2vw;
+    margin-bottom: 2vw;
+    border-radius: 1vw;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7vw;
+  }
+  
+  .cost-details p {
+    font-size: 1.3vw;
+    margin: 0.5vw 0;
+  }
+  
+  .edit-button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+    padding: 1vw 2vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2vw;
+  }
+  
+  .edit-button:hover {
+    background-color: #005fa3;
+  }
+  
+
+
+/* Container for form */
+.form-container {
+    background-color: #FFFFFF;
+    padding: 3vw;
+    margin-top: 6vw;
+    border-radius: 1.5vw;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Section title */
+.section-title {
+    font-size: 2vw;
+    margin-top: 3vw;
+    margin-bottom: 1.5vw;
+    color: #0077cc;
+    border-bottom: 2px solid #F1F6FE;
+    padding-bottom: 0.5vw;
+}
+
+/* Form groups */
+.form-group {
+    margin-bottom: 2vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2vw;
+}
+
+label {
+    margin-bottom: 0.8vw;
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 1vw;
+    border-radius: 0.5vw;
+    border: 1px solid #ccc;
+    font-size: 1.5vw;
+    background-color: #F1F6FE;
+    color: #333;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #0077cc;
+    border-color: #0077cc;
+}
+
+/* Half-width layout for side-by-side inputs */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.half-width {
+    flex: 1;
+}
+
+/* Submit button */
+#submitButton {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 1.2vw;
+    border: none;
+    border-radius: 0.7vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1vw;
+}
+
+#submitButton:hover {
+    background-color: #005fa3;
+}
+
+/* Error handling */
+.invalid-input {
+    border: 2px solid red !important;
+    background-color: #ffe5e5;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    display: block;
+}
