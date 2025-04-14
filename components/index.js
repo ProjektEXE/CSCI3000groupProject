@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(showNextSlide, 3000);
 
     // Button functionality
-    const randomButton = document.querySelector(".randomButton");
+    const randomButton = document.querySelector(".random-button");
     const galleryButton = document.getElementById("galleryButton");
     const content = document.querySelector(".content");
     const imageSlider = document.querySelector('.image-slider');
