@@ -1,0 +1,251 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #fff;
+  }
+  
+  /**************** Navigation *****************/
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav{
+    display:flex;
+    gap:35px;
+    position:relative;
+    left:40px;
+  }
+  .nav-bar nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+  }
+
+  #nav-logo{
+    color:#2356D1
+  }
+  
+  /***************** Sections *****************/
+  .section-light {
+    background-color: #F1F6FE;
+  }
+  
+  .section-tan {
+    background-color: #fdf7ed;
+  }
+
+  .text-section,
+  .card-section,
+  .media-section{
+    padding: 2rem;
+    max-width: 95%;
+    margin: auto;
+
+    /*
+    border:solid;
+    border-color: black;
+    border-width: 4px;
+    */
+  }
+
+  .card-section, .media-section{
+    border-radius: 20px;
+    margin-bottom:50px;
+  }
+
+
+  /***********Header**************/
+  .header-section {
+    background-color: #eaf3fb;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin:0;
+  }
+
+  /*************Overview************/
+  .text-section{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+/*
+  .text-section h1,p{
+    border:solid;
+    border-color: black;
+    border-width: 2px;
+  }
+*/
+  .text-section h1{
+    font-size:200%;
+    flex:0 1 auto;
+    left:5%;
+    padding-right: 20px;
+  }
+
+  .text-section p{
+    flex:0 1 75%;
+    padding-left: 20px;
+  }
+
+  /************Culture*************/
+  .media-section{
+    height:100%;
+  }
+  
+  /************Highlight************/
+  .highlight-section{
+    margin:0;
+    width:100%;
+  }
+  /*****************Flex Layout *****************/
+  /* COME BACK TO FIX THE SHRINKING AND EXPANDING*/
+  .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    gap:0;
+    margin:0;
+    padding:0;
+
+    /*
+    border-width: 5px;
+    border-style: solid;
+    margin:10px;
+    */
+  }
+  
+  .text-block {
+    flex: 1 1 30%;
+    position: relative;
+    top:0px;
+    padding:100px auto;
+
+    /*
+    border-color:red;
+    border-width: 5px;
+    border-style: solid;
+    margin:0px;
+    */
+  }
+
+  .header-section h1 {
+    text-decoration: none;
+    font-size:200%;
+    color: #2356D1;
+    padding-left:5%;
+    padding-top:10%;
+    position:relative;
+    left:40px;
+
+    /*
+    border-style: solid;
+    border-width: 5px;
+    */
+  }
+  
+  .image-block {
+    flex: 1 1 70%;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /***************** Card Layout *****************/
+  .card-section{
+    margin-bottom: 25px;
+    height:110vh;
+  }
+
+  .card-container {
+    height:90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .card {
+    flex:0 1 30%;
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 384px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /***************** Headings *****************/
+  h1, h2, h3, h4 {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Culture Section */
+  .culture-img {
+    max-width: 250px;
+    border-radius: 10px;
+  }
+  
+  /***************** CTA ****************/
+  .cta-box {
+    margin-top: 1rem;
+    padding: 2rem;
+    border: 2px dashed #ccc;
+    min-height: 200px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  /***************** Responsive *****************/
+  @media (max-width: 768px) {
+    .flex-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .card-container {
+      justify-content: flex-start;
+    }
+  
+    .cta-box {
+      padding: 1rem;
+    }
+
+    hr{
+        display:none;
+    }
+  }
+  
