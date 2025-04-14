@@ -6,6 +6,59 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form>
+        <h3>Please complete the quiz below to help us find your perfect getaway!</h3>
+        <p id="question1">Q1: Are you more inspired by nature or by archetecture?</p>
+            <div>
+                <input type="radio" name="civi" value="1">
+                <label for="city">Architecture, to be sure. It's amazing to see what can be done when working together!</label>
+            </div>
+            <div>
+                <input type="radio" name="civi" value="2">
+                <label for="Outdoors">Nature, all the way It's colors and complexities are awe-inspiring!</label>
+            </div>
+            <div>
+                <input type="radio" name="civi" value="3">
+                <label for="Both">Maybe Both? Nature is awesome and all that, but I also like warm, soft beds.</label>
+            </div>
+
+
+        <p id="question2">Q2: Are your vacations about relaxation or adventure?</p>
+            <div>
+                <input type="radio" name="Chill/Chase" value="1">
+                <label for="Chill">Relaxation! I go on vacation so I can kick my feet up and unwind! </label>
+            </div>
+            <div>
+                <input type="radio" name="Chill/Chase" value="2">
+                <label for="Explore">Adventure! I can relax anywhere, I want to explore and learn about the world!</label>
+            </div>
+
+        <p id="question3">Q3: What makes a location interesting? It's tangible qualities, or it's inhabitants and history?</p>
+            <div>
+                <input type="radio" name="interest" value="1">
+                <label for="Tangible">The setting itself is perfect! People and their shenanigans can be overwhelming.</label>
+            </div>
+            <div>
+                <input type="radio" name="interest" value="2">
+                <label for="Culture">Culture and history for sure! It's awesome to see how things got to where they are!</label>
+            </div>
+            <div>
+                <input type="radio" name="interest" value="3">
+                <label for="Yes"> You have got to have both! Otherwise, you questions never get answered.</label>
+            </div>
+            <div>
+                <input id= "go" type="Submit" value="Find my destination"> 
+            </div>
+        </form>
+        <script> 
+        
+        addEventListener("submit", function(){
+
+            console.warn("submission received, processing..."); 
+        });
+            
+        </script>
+    </body>
+</html>
 </body>
 </html>
