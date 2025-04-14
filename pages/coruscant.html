@@ -1,48 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coruscant</title>
-    <link rel="stylesheet" href="../styles/coruscantStyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coruscant</title>
+  <link rel="stylesheet" href=".\styles\coruscantStyle.css">
 </head>
 <body>
-    <div class="brochure-container">
-      
 
-      <div class="panel left-panel">
-        <img src="../images/coruscant_cityscape.jpg" alt="Coruscant Skyline" class="panel-img">
-      </div>
-  
+  <!-- Navigation -->
+  <header class="nav-bar">
+    <nav>
+      <a href="../index.html" id="nav-logo">❤ OUR LOGO HERE</a>
+      <!-- You can add dropdown here later -->
+      <a href="../index.html">Destinations</a>
+    </nav>
+  </header>
 
-      <div class="panel center-panel">
-        <img src="../images/coruscant_city_skyline.avif" alt="Coruscant city" class="panel-img">
+  <!-- Header Section -->
+  <section class="header-section section-light">
+    <div class="flex-row">
+      <div class="text-block">
         <h1>Coruscant</h1>
-        <p>
-          Soar into the heart of the galaxy and explore Coruscant, the ultimate urban getaway! This planet-wide metropolis...
-          <br><br>
-          From the glamorous towers of the upper class to the gritty charm of the underworld, Coruscant is a planet of infinite layers and possibilities.
-        </p>
       </div>
-  
+      <div class="image-block">
+        <img src="./images/coruscantskyline.jpg" alt="Coruscant Skyline" />
+      </div>
+    </div>
+  </section>
 
-      <div class="panel right-panel">
-        <img src="../images/coruscant.jpeg" alt="Spaceship over Coruscant" class="panel-img">
-        <div class="tagline">
-          <h2>Travel Beyond</h2>
-          <p>The galaxy's waiting for you.</p>
-        </div>
+  <!-- Overview -->
+  <section class="text-section">
+    <h1>Overview</h1>
+    <hr>
+    <p>
+      Welcome to Coruscant, the galaxy's political and cultural capital.
+      This planet-wide metropolis boasts levels of history and luxury stretching from sky to core.
+      Whether you're exploring Jedi Temple ruins or clubbing in the Underworld, Coruscant has it all.
+    </p>
+  </section>
+
+  <!-- Attractions -->
+  <section class="card-section section-light">
+    <h2>Attractions</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="./images/coruscantuppercity.webp" alt="Upper City" />
+        <h3>Upper City</h3>
+        <p>Experience elite shopping, sky lounges, and Senate views high above the clouds.</p>
       </div>
-  
+      <div class="card">
+        <img src="./images/coruscantunderworld.jpg" alt="Underworld" />
+        <h3>The Underworld</h3>
+        <p>Venture below to neon-lit speeder alleys, bounty cantinas, and spice markets.</p>
+      </div>
+      <div class="card">
+        <img src="./images/coruscantjeditemple.webp" alt="Jedi Temple" />
+        <h3>Jedi Temple Ruins</h3>
+        <p>Walk among the remnants of the Jedi Order's iconic temple and archives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Culture Section -->
+  <section class="media-section section-tan">
+    <h2>Culture</h2>
+    <div class="flex-row">
+      <img src="./images/coruscantculture.jpg" alt="Coruscant Culture" class="culture-img" />
+      <div>
+        <p>Coruscant is home to billions of beings from across the galaxy.</p>
+        <p>Expect diverse languages, fashion, and customs with a strong Republic legacy.</p>
+        <p>The mix of Core World nobility and street culture defines its unique atmosphere.</p>
+      </div>
+    </div>
+
+    <h2>Local Cuisine</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="./images/corellianale.webp" alt="Corellian Ale" />
+        <h4>Corellian Ale</h4>
+        <p>A beloved brew found in Coruscant cantinas, known for its kick and fizz.</p>
+      </div>
+      <div class="card">
+        <img src="./images/rationpack.webp" alt="Space Ration" />
+        <h4>Standard Ration Pack</h4>
+        <p>Reimagined rations elevated to haute cuisine in upscale Coruscant restaurants.</p>
+      </div>
+      <div class="card">
+        <img src="./images/bluemilkcocktail.jpg" alt="Blue Milk Cocktail" />
+        <h4>Blue Milk Cocktail</h4>
+        <p>Served chilled with spice extract and glowing ice cubes. Very popular in upper districts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlight Section -->
+  <section class="highlight-section section-light">
+    <h2>When to Visit?</h2>
+    <p>
+      Plan your visit during the <strong>Festival of Lights</strong>, when Coruscant glows from
+      top to bottom in honor of unity and peace. Expect parades, levitating fireworks, and endless music.
+    </p>
+    <div class="image-block">
+      <img src="./images/festivaloflights.webp" alt="Festival of Lights" />
     </div>
 
     <div class="forum">
-        <p>Ready to travel to Coruscant?</p>
-        <p>Book your flight today!</p>
-      <div class="center-button">
-        <button onclick="window.location.href='booking.html?destination=Coruscant';">Book Now!</button>
-      </div>
-    </div>
-  </body>
-  
+  <p>Ready to travel to Coruscant?</p>
+  <p>Book your flight today!</p>
+  <div class="center-button">
+    <button onclick="window.location.href='booking.html?destination=Coruscant';">Book Now!</button>
+  </div>
+</div>
+  </section>
+</body>
 </html>
