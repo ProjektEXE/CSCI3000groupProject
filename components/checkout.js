@@ -142,7 +142,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }
   
       if (isValid) {
-        // 👇 Get values from summary display, not sessionStorage
+        // Get values from summary display, not sessionStorage
         const confirmedFirstName = document.getElementById("summaryFirstName").textContent.trim();
         const confirmedLastName = document.getElementById("summaryLastName").textContent.trim();
         const confirmedEmail = document.getElementById("summaryEmail").textContent.trim();
