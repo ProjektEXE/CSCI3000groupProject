@@ -248,4 +248,53 @@
         display:none;
     }
   }
+
+  /* Forum Button */
+  .forum {
+    background-color: #fdf7ed; /* matches section-tan */
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 95%;
+    margin: 3rem auto;
+    text-align: center;
+  }
+  
+  .forum p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+  }
+  
+  .center-button {
+    text-align: center;
+  }
+  
+  .center-button button {
+    font-weight: bold;
+    background-color: #2356D1;
+    height: auto;
+    width: 60vw;
+    padding: 2vw 3vw;
+    font-size: 3vw;
+    cursor: pointer;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid white;
+    border-radius: 1vw;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .center-button button:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+  }
+  
+  
+  .center-button button:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+  }
+  
   
