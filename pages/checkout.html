@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VoyageVerse | Checkout</title>
-  <link rel="stylesheet" href="../styles/checkout.css"/>
+  <link rel="stylesheet" href="../styles/checkout.css" />
   <script src="../components/checkout.js" defer></script>
 </head>
 
@@ -114,10 +115,24 @@
         </div>
       </div>
 
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="waiverCheckbox">
+          I acknowledge that VoyageVerse is not responsible for my return from the destination, nor does it guarantee my
+          safety while I am there. I understand that I am solely responsible for all housing and travel arrangements
+          following my transportation by VoyageVerse to the destination. Additionally, I recognize that VoyageVerse will
+          not provide any necessities and is solely responsible for my transportation to the specified location. By
+          clickingthis checkbox, I agree to the terms and conditions of this waiver.
+        </label>
+        <p class="error-message" id="waiverError"></p>
+      </div>
+
+
       <div class="form-group submit-group">
         <button type="submit" id="submitButton">Confirm Booking</button>
       </div>
     </form>
   </div>
 </body>
+
 </html>

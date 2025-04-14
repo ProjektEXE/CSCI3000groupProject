@@ -30,15 +30,15 @@
   </div>
 
   <script>
-    const email = sessionStorage.getItem("email") || "[your email]";
-    const firstName = sessionStorage.getItem("firstName") || "";
-    const lastName = sessionStorage.getItem("lastName") || "";
-    const phone = sessionStorage.getItem("phone") || "Not provided";
-    const destination = sessionStorage.getItem("destination") || "";
-    const departure = sessionStorage.getItem("departure") || "";
-    const passengers = sessionStorage.getItem("passengers") || "1";
+    const firstName = sessionStorage.getItem("confirmedFirstName") || "";
+    const lastName = sessionStorage.getItem("confirmedLastName") || "";
+    const email = sessionStorage.getItem("confirmedEmail") || "[your email]";
+    const phone = sessionStorage.getItem("confirmedPhone") || "Not Provided";
+    const passengers = sessionStorage.getItem("confirmedPassengers") || "1";
+    const destination = sessionStorage.getItem("confirmedDestination") || "";
+    const departure = sessionStorage.getItem("confirmedDeparture") || "";
     const cost = parseInt(passengers) * 5000;
-
+  
     document.getElementById("confirmation-email").textContent = email;
     document.getElementById("summary-name").textContent = `${firstName} ${lastName}`;
     document.getElementById("summary-phone").textContent = phone;
@@ -46,12 +46,13 @@
     document.getElementById("summary-date").textContent = departure;
     document.getElementById("summary-passengers").textContent = passengers;
     document.getElementById("summary-cost").textContent = `$${cost.toLocaleString()}`;
-
-
-    setTimeout(() => {
+  
+    document.querySelector(".return-button-container button").addEventListener("click", () => {
       sessionStorage.clear();
-    }, 500);
+      window.location.href = "../index.html";
+    });
   </script>
+  
 </body>
 
 </html>

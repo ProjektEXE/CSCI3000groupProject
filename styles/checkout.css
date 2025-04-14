@@ -94,20 +94,20 @@ html {
     padding: 2vw;
     margin-bottom: 2vw;
     border-radius: 1vw;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 7vw;
-  }
-  
-  .cost-details p {
+}
+
+.cost-details p {
     font-size: 1.3vw;
     margin: 0.5vw 0;
-  }
-  
-  .edit-button {
+}
+
+.edit-button {
     background-color: #0077cc;
     color: white;
     border: none;
@@ -117,12 +117,12 @@ html {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 2vw;
-  }
-  
-  .edit-button:hover {
+}
+
+.edit-button:hover {
     background-color: #005fa3;
-  }
-  
+}
+
 
 
 /* Container for form */
@@ -216,3 +216,28 @@ select:focus {
     margin-top: 0.2rem;
     display: block;
 }
+
+.checkbox-label {
+    font-size: 1.1vw;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6vw;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.3);
+    margin-top: 0.2vw;
+}
+
+#waiverError {
+    margin-top: 0.5vw;
+    color: red;
+    font-size: 0.9rem;
+}
+
+.invalid-input[type="checkbox"] {
+    outline: 2px solid red;
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.2);
+  }
+  
