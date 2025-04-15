@@ -1,0 +1,152 @@
+/* Base Styling */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FDFBF6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Navigation - directly borrowed from index.css */
+#banner {
+    width: 100%;
+    background-color: #0077cc;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-button,
+.dropbtn {
+    padding: 1vw 2vw;
+    font-size: 1.5vw;
+    background-color: #0077cc;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover,
+.dropbtn:hover {
+    background-color: #005fa3;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    top: 100%;
+    left: 0;
+    display: none;
+    position: absolute;
+    background-color: #0077cc;
+    min-width: 10vw;
+    z-index: 10;
+    border-radius: 0.5vw;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 0.8vw 1vw;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1vw;
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-content a:hover {
+    background-color: #005fa3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero-banner {
+    position: relative;
+    margin-top: 5vw;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero-text h1 {
+    font-size: 4vw;
+    margin-bottom: 1vw;
+}
+
+.hero-text p {
+    font-size: 1.5vw;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 4vw;
+    background-color: #FDFBF6;
+}
+
+.alt-bg {
+    background-color: #F1F6FE;
+}
+
+.content-section h2 {
+    color: #0077cc;
+    font-size: 2.5vw;
+    margin-bottom: 1vw;
+}
+
+.content-section p {
+    font-size: 1.3vw;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/* CTA */
+.cta-section {
+    background-color: #F1F6FE;
+    text-align: center;
+    padding: 3vw;
+    margin-top: 3vw;
+    border-radius: 1vw;
+}
+
+.cta-button {
+    background-color: #0077cc;
+    color: white;
+    padding: 1vw 2.5vw;
+    border: none;
+    font-size: 1.5vw;
+    border-radius: 0.7vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #005fa3;
+}
