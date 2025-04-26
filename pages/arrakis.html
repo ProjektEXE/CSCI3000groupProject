@@ -24,7 +24,7 @@
                 <h1>Arrakis</h1>
             </div>
             <div class="image-block">
-                <img src="../images/arrakis_location.jpg" alt="Cybertron Cityscape" />
+                <img src="../images/arrakis_location.jpg" alt="Arrakis" />
             </div>
         </div>
     </section>
@@ -76,7 +76,7 @@
     <section class="media-section section-tan">
         <h2 class="section-nums">02 / Culture</h2>
         <h3 class="section-headers">Culture<hr></h3>
-        <div class="flex-row">
+        <div class="flex-row" id="culture-flex">
             <img src="../images/cybertornian_culture.jpg.webp" alt="Cybertron Culture" class="culture-img" />
             <div>
                 <p>Cybertronians communicate using a mix of spoken word and encoded signals.</p>
@@ -86,19 +86,25 @@
         </div>
 
         <h3 class="section-headers">Local Cuisine<hr></h3>
-        <div class="card-container">
-            <div class="card" id="cuisine-card1">
-                <img src="../images/arrakis_shake.jpeg" alt="Coolant Whip" />
+        <div class="card-container-cuisine">
+            <div class="card-cuisine">
+                <div class="cuisine-img">
+                    <img src="../images/arrakis_shake.jpeg" alt="Coolant Whip" />
+                </div>
                 <h4>Coolant Whip</h4>
                 <p>A frosty, sour Energon cupcake. Refreshingly tangy & perfect for cooling overheated circuits.</p>
             </div>
-            <div class="card" id="cuisine-card2">
-                <img src="../images/arrakis_shake.jpeg" alt="Coolant Whip" />
+            <div class="card-cuisine">
+                <div class="cuisine-img">
+                    <img src="../images/arrakis_shake.jpeg" alt="Coolant Whip" />
+                </div>
                 <h4>Coolant Whip</h4>
                 <p>Also comes in zero-sugar options! A mech favorite.</p>
             </div>
-            <div class="card" id="cuisine-card3">
-                <img src="../images/arrakis_shake.jpeg" alt="Coolant Whip" />
+            <div class="card-cuisine">
+                <div class="cuisine-img">
+                    <img src="../images/arrakis_shake.jpeg" alt="Coolant Whip" />
+                </div>
                 <h4>Coolant Whip</h4>
                 <p>Sometimes topped with sparks for a spicy crunch.</p>
             </div>
@@ -106,21 +112,21 @@
 
     <!-- Highlight Section -->
     <section class="highlight-section section-light">
-        <h2 class="section-nums">03 / Planning a visit</h2>
-        <h3 class="section-headers">When to visit?</h3>
-        <p>
-        Plan your trip during the <strong>Festival of Gears</strong>—a weeklong celebration of innovation,
-        light shows, and friendly competitions between Autobot and Decepticon engineers.
-        </p>
-        <div class="image-block">
-            <img src="festival.jpg" alt="Festival of Gears" />
+        <div class="highlight-div">
+            <h2 class="section-nums">03 / Planning a visit</h2>
+            <h3 class="section-headers">When to visit?</h3>
+            <p>
+            Plan your trip during the <strong>Festival of Gears</strong>—a weeklong celebration of innovation,
+            light shows, and friendly competitions between Autobot and Decepticon engineers.
+            </p>
         </div>
+        <img src="../images/highlight_arrakis.webp" alt="Festival of Gears" id="highlight-img"/>
         <div class="forum">
             <p>Ready to travel to Arrakis?</p>
             <p>Book your flight today!</p>
             <div class="center-button">
                 <button onclick="window.location.href='booking.html?destination=Arrakis';">Book Now!</button>
-            </div>
+        </div>
     </section>
 </body>
 </html>
